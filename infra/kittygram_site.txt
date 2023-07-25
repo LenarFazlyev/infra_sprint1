@@ -1,0 +1,5 @@
+IP: 158.160.2.93;
+name_taski: https://lenarf-taski.sytes.net;
+name_kittygram: https://lenarfkyttygram.sytes.net;
+login: adminny;
+password: adminny; 
