@@ -59,4 +59,8 @@ SECRET_KEY = '<Ваш Ключ>'
 ```
 
 ## Автор:
+<<<<<<< HEAD
  :grinning: Lenar :sunglasses:
+=======
+ :grinning: Lenar :sunglasses::boom:
+>>>>>>> refs/remotes/origin/main
