@@ -1,6 +1,6 @@
 server {
     server_name lenarf-taski.sytes.net;
-    
+
     server_tokens off;
 
     location /api/ {
@@ -10,7 +10,7 @@ server {
     location /admin/ {
         proxy_pass http://127.0.0.1:8000;
     }
-    
+
     location / {
         root   /var/www/taski;
         index  index.html index.htm;
@@ -25,7 +25,7 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 
 
-} 
+}
 
 
 server {
