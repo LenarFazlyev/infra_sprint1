@@ -1,5 +1,7 @@
 server {
     server_name lenarf-taski.sytes.net;
+    
+    server_tokens off;
 
     location /api/ {
         proxy_pass http://127.0.0.1:8000;
@@ -25,22 +27,13 @@ server {
 
 } 
 
-server {
-    if ($host = lenarf-taski.sytes.net) {
-        return 301 https://$host$request_uri;
-    } # managed by Certbot
-
-
-
-    listen 80;
-    server_name 158.160.2.93 lenarf-taski.sytes.net;
-    return 404; # managed by Certbot
-
-
-}
 
 server {
     server_name lenarfkyttygram.sytes.net;
+
+    client_max_body_size 20M;
+
+    server_tokens off;
 
     location /api/ {
         proxy_pass http://127.0.0.1:8080;
@@ -75,8 +68,13 @@ server {
     } # managed by Certbot
 
 
+    if ($host = lenarf-taski.sytes.net) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
 
     listen 80;
+    server_name 158.160.2.93 lenarf-taski.sytes.net;
     server_name lenarfkyttygram.sytes.net;
     return 404; # managed by Certbot
 
